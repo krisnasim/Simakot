@@ -31,5 +31,6 @@ public class LoginActivity extends AppCompatActivity {
         Typeface myFont = Typeface.createFromAsset(getAssets(), "fonts/arial_italic.ttf");
         nrp_login_input.setTypeface(myFont);
         pwd_input.setTypeface(myFont);
+        //adding changes so I can commit them teehee
     }
 }
