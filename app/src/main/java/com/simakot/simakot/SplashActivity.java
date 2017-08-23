@@ -101,27 +101,10 @@ public class SplashActivity extends AppCompatActivity implements DialogInterface
                 ActivityCompat.requestPermissions(this, new String[]{permission}, requestCode);
             }
         } else {
-            //Toast.makeText(this, "" + permission + " is already granted.", Toast.LENGTH_SHORT).show();
-
-            //check for request code that has been accepted. check for those who are not accepted yet
-//            if(requestCode == LOCATION) {
-//                isLocationGranted = true;
-//                askForPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE,WRITE_EXST);
-//                Log.d("locationCheck", "location is granted!");
-//                checkAllPermissions();
-//            }
-//
-//            if(requestCode == WRITE_EXST) {
-//                isMediaGranted = true;
-//                askForPermission(Manifest.permission.CAMERA,CAMERA);
-//                Log.d("locationCheck", "media external is granted!");
-//                checkAllPermissions();
-//            }
-
             if(requestCode == CAMERA) {
                 isCameraGranted = true;
                 Log.d("locationCheck", "camera is granted!");
-                //callTimer();
+                callTimer();
             }
         }
     }

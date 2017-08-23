@@ -1,12 +1,15 @@
 package com.simakot.simakot;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -18,6 +21,13 @@ public class HomeActivity extends AppCompatActivity {
     @BindView(R.id.target_number_label) TextView target_number_label;
     @BindView(R.id.sisa_target_number_label) TextView sisa_target_number_label;
     @BindView(R.id.penindakan_number_label) TextView penindakan_number_label;
+
+    @OnClick(R.id.home_button)
+    public void reportHome() {
+        Intent intent = new Intent(HomeActivity.this, ReportActivity.class);
+        startActivity(intent);
+        finish();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
